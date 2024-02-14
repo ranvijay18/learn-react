@@ -1,43 +1,24 @@
-function Expenses(){
+import "./Expenses.css";
 
+function Expenses(props) {
+  // const date = new Date();
+  // const expenseTitle = "Food";
+  // const expenseAmount = "Rs 10";
+  return (
+    <>
+      <ul>
+        {props.arr.map((ele, index) => (
+          <li key={index}>
+            <p>{ele.date}</p>
 
-    const date = new Date();
-    const expenseTitle = "Food";
-    const expenseAmount = "Rs 10";
-    return(
-        <>
-        <div>
-            {date.toISOString()}
-        </div>
-        <div>
-            <h1>{expenseTitle}</h1>
-        </div>
-        <div>
-           {expenseAmount}
-        </div>
+            <h1>{ele.title}</h1>
 
-        <div>
-            18 Feb 2023
-        </div>
-        <div>
-            <h1>Petrol</h1>
-        </div>
-        <div>
-            Rs. 100
-        </div>
-
-        <div>
-            18 Feb 2023
-        </div>
-        <div>
-            <h1>Movie</h1>
-        </div>
-        <div>
-            Rs. 200
-        </div>
-        </>
-        //
-    )
+            <p> {ele.amount}</p>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }
 
 export default Expenses;
