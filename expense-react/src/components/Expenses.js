@@ -1,14 +1,19 @@
 function Expenses(){
+
+
+    const date = new Date();
+    const expenseTitle = "Food";
+    const expenseAmount = "Rs 10";
     return(
         <>
         <div>
-            18 Feb 2023
+            {date.toISOString()}
         </div>
         <div>
-            <h1>Food</h1>
+            <h1>{expenseTitle}</h1>
         </div>
         <div>
-            Rs. 10
+           {expenseAmount}
         </div>
 
         <div>
