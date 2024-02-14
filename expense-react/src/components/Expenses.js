@@ -1,19 +1,16 @@
 import "./Expenses.css";
+import ExpenseDate from "./ExpenseDate";
+import ExpenseDetails from "./ExpenseDetails";
 
 function Expenses(props) {
-  // const date = new Date();
-  // const expenseTitle = "Food";
-  // const expenseAmount = "Rs 10";
   return (
     <>
       <ul>
         {props.arr.map((ele, index) => (
           <li key={index}>
-            <p>{ele.date}</p>
+            <p><ExpenseDate date={ele.date}/></p>
 
-            <h1>{ele.title}</h1>
-
-            <p> {ele.amount}</p>
+            <ExpenseDetails  title={ele.title} amount={ele.amount}/>
           </li>
         ))}
       </ul>

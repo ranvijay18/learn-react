@@ -5,22 +5,22 @@ function App() {
 
   const expenses = [
     {
-      date: "18 Feb 2023",
+      date: new Date(),
       title: "Food",
       amount: "Rs 10"
     },
     {
-      date: "18 Feb 2023",
+      date: new Date(),
       title: "Food",
       amount: "Rs 10"
     },
     {
-      date: "18 Feb 2023",
+      date: new Date(),
       title: "Food",
       amount: "Rs 10"
     },
     {
-      date: "18 Feb 2023",
+      date: new Date(),
       title: "Food",
       amount: "Rs 10"
     }
