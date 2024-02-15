@@ -1,5 +1,6 @@
 import './App.css';
 import Expenses from './components/Expense/Expenses';
+import ExpenseForm from './components/NewExpense/ExpenseForm';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
   return (
    <>
    <h1>Expenses Lists</h1>
+   <ExpenseForm />
    <Expenses arr={expenses}/>
    </>
   );

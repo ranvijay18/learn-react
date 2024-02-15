@@ -1,0 +1,14 @@
+.expense-form{
+    background-color: blueviolet;
+    padding: 15px;
+    margin: 0px 340px;
+    border-radius: 20px;
+    color: white;
+}
+
+.expense-form input{
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
