@@ -1,40 +1,21 @@
+import { useState } from 'react';
 import './App.css';
 import Expenses from './components/Expense/Expenses';
 import ExpenseForm from './components/NewExpense/ExpenseForm';
 
 function App() {
+  const [expenses, setExpenses] = useState([]);
+   
+  const handleFormInput = (data) => {
+      setExpenses([...expenses, data]);
+  }
 
-  const expenses = [
-    {
-      id: 0,
-      date: new Date(),
-      title: "Food",
-      amount: "Rs 10"
-    },
-    {
-      id: 1,
-      date: new Date(),
-      title: "Food",
-      amount: "Rs 100"
-    },
-    {
-      id: 2,
-      date: new Date(),
-      title: "Food",
-      amount: "Rs 1000"
-    },
-    {
-      id: 3,
-      date: new Date(),
-      title: "Food",
-      amount: "Rs 10000"
-    }
-  ]
+
   return (
    <>
    <h1>Expenses Lists</h1>
-   <ExpenseForm />
-   <Expenses arr={expenses}/>
+   <ExpenseForm onFormSubmit={handleFormInput} />
+   <Expenses arr={expenses} />
    </>
   );
 }

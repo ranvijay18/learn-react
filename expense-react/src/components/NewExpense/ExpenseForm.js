@@ -1,7 +1,7 @@
 import "./ExpenseForm.css";
 import { useState } from "react";
 
-function ExpenseForm(){
+function ExpenseForm(props){
 
     const [input, setInput] = useState({});
 
@@ -15,7 +15,7 @@ function ExpenseForm(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-       console.log(input);
+       props.onFormSubmit(input);
     }
 
     return(

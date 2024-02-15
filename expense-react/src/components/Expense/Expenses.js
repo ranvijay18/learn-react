@@ -5,7 +5,7 @@ import ExpenseDetails from "./ExpenseDetails";
 
 function Expenses(props) {
 
-
+console.log(props.arr)
   return (
     <>
       <ul>
