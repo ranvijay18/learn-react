@@ -1,0 +1,6 @@
+.card{
+    background-color: rgba(0, 0, 0, 0.377);
+    width: 900px; /* Set a width for the box */
+    margin: 0 auto;
+    border-radius: 10px;
+}

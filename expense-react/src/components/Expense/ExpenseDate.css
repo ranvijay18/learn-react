@@ -1,0 +1,23 @@
+
+.date{
+    background-color: blue;
+    padding: 0px 10px;
+    border-radius: 8px;
+    line-height: 0.0;
+    text-align: center;
+    color:white;
+    border: 2px solid white;
+}
+
+.year{
+    font-size: small;
+    font-weight: 400;
+}
+.month{
+    font-weight: 600;
+}
+
+.day{
+    font-weight: 900;
+    font-size: 30px;
+}
