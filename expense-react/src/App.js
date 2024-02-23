@@ -3,9 +3,12 @@ import './App.css';
 import Expenses from './components/Expense/Expenses';
 import ExpenseForm from './components/NewExpense/ExpenseForm';
 import ExpenseFilter from './components/Expense/ExpenseFilter';
+import ExpenseChart from './components/Expense/ExpenseChart';
 
 function App() {
   const [expenses, setExpenses] = useState([]);
+
+  const [demo , setDemo] = useState([]);
    
   const handleFormInput = (data) => {
       setExpenses([...expenses, data]);
@@ -13,12 +16,12 @@ function App() {
  
   const handleYear = (year) => {
 
-  const demo =  expenses.filter(ele => {
+   const demoExpense = expenses.filter(ele => {
     const date = new Date(ele.date)
     return date.getFullYear() === +year
    })
  
-   console.log(demo);
+   setDemo(demoExpense);
   }
 
 
@@ -29,6 +32,7 @@ function App() {
    
    <ExpenseForm onFormSubmit={handleFormInput} />
    <ExpenseFilter yearValue = {handleYear}/>
+   <ExpenseChart expensesArr={demo} />
    <Expenses arr = {expenses} />
    </>
   );
